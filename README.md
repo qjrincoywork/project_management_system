@@ -1,4 +1,4 @@
-# project_management_system
+<img width="1027" height="150" alt="image" src="https://github.com/user-attachments/assets/d6394629-4ea5-4a7e-9a14-1819c566ee99" /># project_management_system
 Mini Laravel System — Project Management Tool
 
 In my case, I used docker to containerize them and utilize different ports due to other projects running on my device.
@@ -11,7 +11,11 @@ You may need to install docker if you don't have yet. Install Docker Desktop her
 + Run **make install**
 + Once the containers are up and running:
     + Run **npm run dev**
+    + <img width="1119" height="433" alt="image" src="https://github.com/user-attachments/assets/316e2c09-df85-44df-9dca-034288898f2c" />
+
     + Run **php artisan serve**
+    + <img width="1027" height="150" alt="image" src="https://github.com/user-attachments/assets/1b16d55d-554a-455b-ad52-95d0c1ad0fdb" />
+
 
 Note: It will take some time to set up the MySQL server and Apache on the first execution.
 
