@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: project_management_app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - project_management_network
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: project_management_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: project_management
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: laravel_password
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - project_management_network
+
+volumes:
+  db_data:
+
+networks:
+  project_management_network:
+    driver: bridge
