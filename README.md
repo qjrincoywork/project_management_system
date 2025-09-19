@@ -8,7 +8,10 @@ You may need to install docker if you don't have yet. Install Docker Desktop her
 
 + git clone https://github.com/qjrincoywork/project_management_system
 + cd project_management_system
-+ Run make install
++ Run **make install**
++ Once the containers are up and running:
+    + Run **npm run dev**
+    + Run **php artisan serve**
 
 Note: It will take some time to set up the MySQL server and Apache on the first execution.
 
